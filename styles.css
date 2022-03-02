@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    position: relative;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header{
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.log-in{
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: .5rem;
+    background-color: rgb(236, 236, 236);
+    transition: ease-in-out 200ms;
+}
+
+.log-in:hover{
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-book{
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 15px 25px;
+    border-radius: .5rem;
+    transition: ease-in-out 200ms;
+}
+.add-book:hover{
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
