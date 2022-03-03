@@ -22,36 +22,47 @@ function addBookToLibrary(){
 }
 
 //#################### Pop-Up JavaScript ################################ DOES NOT WORK
-const openPopUpButton = document.querySelectorAll('[data-form-target]')
-const closePopUpButton = document.querySelectorAll('[data-close-btn]')
-const overlay = document.getElementsById('#overlay')
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+// const submitBtn = document.getElementsByClassName('subimt')
 
-//actions
-openPopUpButton.forEach(button => {
-    button.addEventListener('click', () => {
-        const popUp = document.getElementsByClassName(".pop-up")
-        openPopUp(popUp)
-    })
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
 })
 
-closePopUpButton.forEach(button => {
-    button.addEventListener('click', () => {
-        const popUp = document.getElementsByClassName('.pop-up')
-        closePopUp(popUp)
-    })
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
 })
 
-// change class of popUp and overlay to active to engage css
-function openPopUp(popUp){
-    if(popUp === null) return
-    popUp.classList.add('active')
-    overlay.classList.add('active')
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+// submitBtn.addEventListener('click', () => {
+//     const modals = document.querySelectorAll('.modal.active')
+//     modals.forEach(modal => {
+//     closeModal(modal)
+//   })
+// })
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
 }
 
-// change class of popUp and overlay from active to engage css
-
-function closePopUp(popUp){
-    if(popUp === null) return
-    popUp.classList.remove('active')
-    overlay.classList.remove('active')
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }

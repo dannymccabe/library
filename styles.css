@@ -35,13 +35,45 @@ header .logo{
     font-weight: 700;
     border: none;
     border-radius: .5rem;
-    background-color: aliceblue;
-    transition: ease-in-out 200ms;
+    background-color: rgb(236, 236, 236);
 }
 
 .log-in:hover{
     background-color: rgb(202, 221, 238);
     cursor: pointer;
+}
+
+.modal{
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: .5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: aliceblue;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    min-width: 300px;
+}
+
+main div{
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: .5rem;
+}
+
+.modal.active{
+    transform: scale(1);
+    background-color: aliceblue;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 main{
@@ -62,48 +94,55 @@ main{
     cursor: pointer;
 }
 
-
-.pop-up{
-    background-color: aliceblue;
-    padding: 2rem;
-    position: relative;
-    z-index: 10;
-    transform: scale(0);
-    transition: 200ms ease-in-out;
-}
-
-.pop-up.active{
-    transform: scale(1);
-}
-
-.card-header{
+.modal-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
 }
 
-.close-btn{
+input{
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 0.25rem;
+    outline: none;
+    border: solid 1px rgb(202, 221, 238)
+}
+
+input:focus { 
+    outline: none !important;
+    border-color: rgb(107, 118, 128);
+    box-shadow: 0 0 1px rgb(107, 118, 128);
+ }
+
+.close-button{
     border: none;
     font-size: 2rem;
     background-color: transparent;
-    font-weight:  bold;
+    font-weight: 500;
 }
-.close-btn:hover{
+.close-button:hover{
     cursor: pointer;
+    font-weight: 1000;
 }
 
 .submit{
     border: none;
     font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
     padding: 10px 15px;
     border-radius: 1rem;
-    background-color: tomato;
-    color: white;
+    background-color: rgb(202, 221, 238);
+    color: black;
     transition: all ease-in-out 200ms;
+    margin: 1rem;
 }
 .submit:hover{
-    background-color: rgb(201, 76, 54);
+    background-color: rgb(107, 118, 128);
     cursor: pointer;
+    color: white;
 }
 
 footer{
@@ -113,7 +152,7 @@ footer{
     justify-content: center;
 }
 
-.overlay{
+#overlay{
     position: fixed;
     opacity: 0;
     top:0;
@@ -125,7 +164,7 @@ footer{
     transition: 200ms ease-in-out;
 }
 
-.overlay.active{
+#overlay.active{
     pointer-events: all;
     opacity: 1;
 }
