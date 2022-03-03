@@ -9,12 +9,12 @@ body{
     position: relative;
 }
 
-.container{
+/* .container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-}
+} */
 
 header{
     padding: 25px;
@@ -147,6 +147,9 @@ input:focus {
 
 footer{
     height: 50px;
+    width:100%;
+    position:fixed;
+    bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;

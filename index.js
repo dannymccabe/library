@@ -21,11 +21,18 @@ function addBookToLibrary(){
     
 }
 
+
+
+
+
+
+
+
+
 //#################### Pop-Up JavaScript ################################ DOES NOT WORK
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
-// const submitBtn = document.getElementsByClassName('subimt')
 
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -47,13 +54,6 @@ closeModalButtons.forEach(button => {
     closeModal(modal)
   })
 })
-
-// submitBtn.addEventListener('click', () => {
-//     const modals = document.querySelectorAll('.modal.active')
-//     modals.forEach(modal => {
-//     closeModal(modal)
-//   })
-// })
 
 function openModal(modal) {
   if (modal == null) return
