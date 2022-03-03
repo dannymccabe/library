@@ -19,12 +19,30 @@
         </header>
         <main>
             <div>
-                <button class="add-book">+ Add Book</button>
+                <button data-form-target = "pop-up" class="add-book">+ Add Book</button>
+                <div class="pop-up">
+                    <form action="#" method="set" id="set-book">
+                        <div class="card-header">
+                            <h2>Add a Book</h2>
+                            <button data-close-btn class="close-btn">&times;</button>
+                        </div>
+                        <label for="title">Book Title:</label><br>
+                        <input type="text" id="title" name="title"><br>
+                        <label for="author">Author:</label><br>
+                        <input type="text" id="author" name="author"><br>
+                        <label for="pages">Number of Pages:</label><br>
+                        <input type="text" id="pages" name="pages"><br>
+                        <label for="read">Have you read it?</label><br>
+                        <input type="checkbox" id="read" name="read"> <br>
+                        <button type="submit" class="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </main>
         <footer>
             <div class="copyright">Copyright © 2022 darnomccode <a href="https://github.com/darnomccode"></a></div>
         </footer>
+        <div class="overlay" id= "overlay"></div>
     </div>
     <script src="index.js"></script>
 </body>
