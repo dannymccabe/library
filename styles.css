@@ -114,8 +114,7 @@ input:focus {
     outline: none !important;
     border-color: rgb(107, 118, 128);
     box-shadow: 0 0 1px rgb(107, 118, 128);
- }
-
+}
 .close-button{
     border: none;
     font-size: 2rem;
